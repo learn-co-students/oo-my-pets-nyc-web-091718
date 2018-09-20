@@ -50,4 +50,35 @@ class Owner
     end
   end
 
+  def play_with_cats
+    self.pets[:cats].map do |cat|
+      cat.mood = "happy"
+    end
+  end
+
+  def feed_fish
+    self.pets[:fishes].map do |fish|
+      fish.mood = "happy"
+    end
+  end
+
+  def sell_pets
+
+    self.pets.map do |type, pet_type|
+      pet_type.each do |pet|
+        pet.mood = "nervous"
+      end
+    end
+    #binding.pry
+    self.pets = {
+      :fishes => [],
+      :cats => [],
+      :dogs => []
+    }
+  end
+
+  def list_pets
+    "I have #{self.pets[:fishes].size} fish, #{self.pets[:dogs].size} dog(s), and #{self.pets[:cats].size} cat(s)."
+  end
+
 end
