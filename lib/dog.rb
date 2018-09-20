@@ -1,3 +1,13 @@
+require 'pry'
+
 class Dog
-  # code goes here
-end
+
+  attr_accessor :mood
+  attr_reader :name, :owner
+
+  def initialize(name, mood = "nervous")
+    @name = name
+    @mood = mood
+  end
+
+end # End of Dog Class
