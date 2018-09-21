@@ -26,9 +26,9 @@ class Owner
      end
    end
 
-   # def self.reset_all
-   #
-   # end
+   # only instance methods from here on:
+
+  
 
 
 end
