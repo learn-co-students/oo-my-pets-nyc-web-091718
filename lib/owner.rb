@@ -5,12 +5,6 @@ class Owner
 
   @@all = []
 
-  def initialize (species)
-    @@all << self
-    @species = species
-    @pets = {fishes: [], dogs: [], cats: []}
-  end
-
   def self.reset_all
     @@all = []
   end
@@ -21,6 +15,12 @@ class Owner
 
   def self.count
     @@all.count
+  end
+ 
+  def initialize (species)
+    @@all << self
+    @species = species
+    @pets = {fishes: [], dogs: [], cats: []}
   end
 
   def say_species
